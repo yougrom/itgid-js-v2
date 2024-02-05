@@ -6,12 +6,15 @@
 // Example
 // document.querySelector('button').innerHTML = 'Hello';
 let inputIn = document.querySelector('.input-in'); // input
+
+
 let button =  document.querySelector('button'); // button
 let div = document.querySelector('.out'); // 
 let divNew = document.querySelector('.out-new');
 
 // эта функция выполнится только при нажатии на кнопку
 button.onclick = function () {
+    
     console.log('Work!!');
     let b = +inputIn.value; // ставим плюс если нам нужно выводить числа, + позволяет перевести в число
     console.log(b); // то что введено в инрут
@@ -21,6 +24,7 @@ button.onclick = function () {
     div.innerHTML = b; // b - то что было введено в Input
     divNew.innerHTML = b;
     inputIn.value = '';
+    console.log(inputIn);
 };
 
 // onclick указывает некоторый сценарий, который будет запускаться при щелчке по элементу.

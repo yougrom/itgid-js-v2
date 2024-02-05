@@ -5,8 +5,9 @@ console.log(helloWorld);
 // alert('Hello');
 
 document.getElementById('out').innerHTML = 'Hello';
+console.log(document.getElementById('out'));
 
-document.getElementById('out').innerHTML = '<em>2024</em>';
+document.getElementById('out').innerHTML = '<h1>2024</h1>';
 
 document.querySelector('h2.header').innerHTML = !500;
 
@@ -24,3 +25,9 @@ let d = 9;
 console.log(c * d);
 
 console.log(helloWorld);
+
+
+
+{
+let a = 6;
+}

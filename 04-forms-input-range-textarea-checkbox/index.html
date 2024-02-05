@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работаем с формами: input, range, textarea, checkbox </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>input</h2>
+        <input type="password" id="one">
+        <button>Push</button>
+        <hr>
+    </div>
+    <div class="container">
+        <h2>color</h2>
+        <input type="color" id="oneColor">
+        <button class="color">Push</button>
+        <hr>
+    </div>
+    <div class="container">
+        <h2>date</h2>
+        <input type="date" id="oneDate">
+        <button class="date">Push</button>
+        <div class="output"></div>
+        <hr>
+    </div>
+    <div class="container">
+        <h2>range</h2>
+        <input type="range" id="oneRange" min="0" max="200" value="30">
+        <button class="range">Push</button>
+        <span>30</span>
+        <hr>
+    </div>
+    <div class="container">
+        <h2>checkbox</h2>
+        <input type="checkbox" id="oneCheckbox" value="Hello">
+        <label for="oneCheckbox">Click Me</label>
+        <button class="checkButton">Push</button>
+        <hr>
+    </div>
+    <div class="container">
+        <h2>textarea</h2>
+        <textarea name="" id="oneTextarea" cols="30" rows="5"></textarea><br>
+        <button class="areaButton">Push</button>
+        <hr>
+    </div>
+    <div class="container">
+        <h2>form</h2>
+        <form action="">
+            <textarea name="" id="textareaId" cols="30" rows="5" name="textareaName"></textarea><br>
+            <input type="text" id="inputText" name="inputName">
+            <button class="areaButtonForm">Push</button>
+        </form>
+        <hr>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

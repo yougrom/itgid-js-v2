@@ -2,7 +2,7 @@
 // Example
 let a = 16;
 // >= <= == !=
-if ( a == 9 ) {
+if ( undefined ) {
     // true
     console.log('Yes!!!'); // первая часть конструкции либо сработает либо нет
 } else { 
@@ -22,12 +22,19 @@ button.onclick = () => { // По нажатию кнопки onclick сдела�
     } else {
         console.log('No Enter');
     }
+    
     // если у нас большая конструкция тогда используем switch
     switch (num) {
         case 15:
             console.log('Take your time boy!');
             break;
-        case 16:
+        case undefined:
+            console.log('You are adult!');
+            break;
+        case '19':
+            console.log('Take your time boy!');
+            break;
+        case NaN:
             console.log('You are adult!');
             break;
         default:
@@ -81,7 +88,7 @@ const buttonTwo = document.querySelector('.b-2');
 const outTwo = document.querySelector('.out-2');
 
 buttonTwo.onclick = function f2(){
-    if (a21 > a22) {
+    if (a21 <= a22) {
         outTwo.innerHTML = a21;
     } else if (a22 > a21) {
         outTwo.innerHTML = a21;
