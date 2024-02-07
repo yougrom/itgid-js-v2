@@ -1,4 +1,7 @@
 // анонимную функцию мы используем если мы будем использовать эту функцию один раз
+
+//const { log } = require("console");
+
 // Example 1
 document.querySelector('button').onclick = function() {}
 
@@ -13,12 +16,12 @@ function myFunk(){}
 document.querySelector('button').onclick = () => {}
 
 
-// input password practice *************************************
+// forms password practice *************************************
 document.querySelector('button').onclick = () => {
     console.log(document.querySelector('#one').value); // value — это значение введённое в данный объект
 }
 
-// input color practice *************************************
+// forms color practice *************************************
 document.querySelector('button.color').onclick = () => {
     console.log(document.querySelector('#oneColor').value); 
 
@@ -30,7 +33,7 @@ document.querySelector('button.color').onclick = () => {
     document.querySelector('button.color').style.backgroundColor = randomColor;
 };
 
-// input date practice *************************************
+// forms date practice *************************************
 document.querySelector('button.date').onclick = () => {
 
     // задача* вывести дату на страницу
@@ -47,7 +50,7 @@ document.querySelector('button.date').onclick = () => {
     console.log(text); // для проверки можно выводить значение в консоль
 }
 
-// input range practice *************************************
+// forms range practice *************************************
 document.querySelector('button.range').onclick = () => {
     console.log(document.querySelector('#oneRange').value);
 }
@@ -59,7 +62,7 @@ document.querySelector('#oneRange').oninput = () => {
     document.querySelector('span').innerHTML = document.querySelector('#oneRange').value;
 }
 
-// input checkbox practice *************************************
+// forms checkbox practice *************************************
 document.querySelector('button.checkButton').onclick = () => {
     console.log(document.querySelector('#oneCheckbox').value);
 
@@ -74,19 +77,98 @@ document.querySelector('button.checkButton').onclick = () => {
     }
 }
 
-// input textarea practice ************************************
+// forms textarea practice ************************************
 document.querySelector('button.areaButton').onclick = () => {
     let text = document.querySelector('#oneTextarea');
     console.log(text.value);
     text.value = 'test inside';
 }
 
-// input form practice ************************************
+// forms form practice ************************************
 // задача научиться внутри формы останавливать её поведение
 document.querySelector('button.areaButtonForm').onclick = (event) => { // передаем внутрь функции параметр event - глобальный объект события
-    event.preventDefault(); //  предотвращает стандартное поведение отправки формы.
+    event.preventDefault(); //  метода preventDefault() в обработчике события click предотвратит отправку формы и, соответственно, перезагрузку страницы.
     let form = document.querySelector('form');
     console.log(form);
     console.log(form.elements.textareaId.value);
     console.log(form.elements.inputText.value);
+}
+
+// Task 1 practice ************************************
+// задача — При нажатии (click) на .b-1 запускайте f1, которая выводите в .out-1 число 1.
+
+ document.querySelector('.button-1').onclick = () => {
+    let output = document.querySelector('.output-1');
+    output.innerHTML = '1';
+    console.log('1');
+};
+
+// Task 1.01 practice ************************************
+// задача — В форме При нажатии (click) на .b-1 запускайте f1, которая выводите в .out-1 число 1.
+
+document.querySelector('.button-f1').onclick = (event) => {
+    event.preventDefault();
+    let output = document.querySelector('.output-f1');
+    output.innerHTML = '1';
+    console.log('1');
+};
+
+// Task 2 practice ************************************
+// задача — При нажатии (click) на .i-2 запускайте f2, которая выводите в .out-2 число 2. 
+// Т.е. как видите, мы можем повесить клик на любой элемент.
+
+document.querySelector('.input-2').onclick = function f2() {
+    let output = document.querySelector('.output-2');
+    output.innerHTML = '2';
+};
+
+// Task 3 practice ************************************
+// При нажатии (click) на .p-3 запускайте f3, которая выводите в .out-3 число 3. 
+// Т.е. как видите, мы можем повеcить клик на любой элемент.
+
+document.querySelector('.paragraph-3').onclick = function f3() {
+    let output = document.querySelector('.output-3');
+    output.innerHTML = '3';
+    // задача покрасить цифру
+    output.style.color = 'red';
+};
+
+// Task 4 practice ************************************
+// При клике по кнопке .b-4 запускается функция f4. 
+// Функция проверяет состояние .i-4 и если он checked - выводит true, если не выбран - false. 
+// Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. 
+// В данном случае - div.out-4
+
+document.querySelector('.button-4').onclick = function f4() {
+    console.log(document.querySelector('.input-4').value);
+    
+    let inputCheckbox = document.querySelector('.input-4');
+    let output = document.querySelector('.output-4');
+    
+    console.log(inputCheckbox.checked); // true ot false
+
+    if (inputCheckbox.checked) {
+        output.innerHTML = 'true';
+        console.log('Pushed:))');
+    } else { 
+        output.innerHTML = 'false';
+        console.log('Unpushed:((');
+    }
+};
+
+// Task 5 practice ************************************
+// При клике по кнопке .b-5 запускается функция f5. 
+// Функция проверяет состояние .i-5 и если он checked - выводит value данного элемента, 
+// если не выбран - false. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер 
+// задачи. В данном случае div.out-5
+
+document.querySelector('.button-5').onclick = function f5() {
+    let valueInput = document.querySelector('.input-5').value;
+    let inputCheckbox = document.querySelector('.input-5');
+    let output = document.querySelector('.output-5');
+    if (inputCheckbox.checked) {
+        output.innerHTML = valueInput;
+    } else {
+        output.innerHTML = inputCheckbox.checked;
+    }
 }
