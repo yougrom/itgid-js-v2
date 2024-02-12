@@ -5,6 +5,8 @@
 // while
 // do while
 
+// const { log } = require("console");
+
 //const { log } = require("console");
 
 //const { some } = require("lodash");
@@ -14,7 +16,7 @@
 // {} - блок команд которые будут повторяться при условии цикла если эти условия верны
 
 // practice for() loop *************************************
-for (let i = 0; i < 5; i++) {
+for (let i = 1; i < 5; i++) {
     console.log(i); // 0 1 2 3 4
 }; // 5 !< 5 — цикл завершается
 // работаем дальше когда цикл завершается
@@ -124,6 +126,21 @@ document.querySelector('.button-1').onclick = function t1() {
         outText.innerHTML += [i] +'_';
     }
 };
+
+// Как сделать без дубляжа и вывода в цикле на страницу?
+// Что плохо в этом решении? Плохо то, что браузер должен перерисовать страницу 6 раз. 
+// А операции ввода, вывода, рендера - всегда самые затратные по ресурсам. 
+// Как следствие, если вы запустит код 2 раза, то получите еще ко всему, и дубляж кода - данные будут дописываться на страницу.
+
+function fff(){
+	// важно объявлять out внутри функции
+	let out = ''; // тут даже пробела нет просто 2 кавычки
+	for (let i = 0; i < 6; i++ ){
+		out += i;
+	}    
+	// после цикла одним махом выводим
+	elem.innerHTML = out;
+}
 
 // Task 2 *************************************
 // Кнопка .b-2 запускает функцию t2. Функция должна выводить в .out-2 строку вида:
@@ -267,3 +284,64 @@ for (let line = totalLines; line > 0; line--) {
     }
     console.log(stars);
 };
+
+
+// Task 7 Var_1 *************************************
+// Есть input .i-7 куда пользователь может ввести число больше нуля (проверок не делаем, принимаем как факт). 
+// + По нажатию кнопки b-7 должна запускаться функция t7, 
+// которая выводит в out-7 числа от введенного пользователем до нуля включительно.
+// Разделитель - знак подчеркивания. Если пользователь ввел 4 и нажал кнопку, мы получим:
+// 4_3_2_1_0_
+// Задача решается с помощью цикла.
+
+
+
+// document.querySelector('.button-7').onclick = function t7() {
+
+//     let inputValue = document.querySelector('.input-7').value;
+//     console.log(inputValue);
+//     console.log(inputValue.length);
+
+//     let resultOut = '';
+
+//     for (let i = 0; i < inputValue.length; i++) {
+//         resultOut = resultOut + inputValue[i] + '_';
+
+//     }
+    
+//     let outInput = document.querySelector('.out-7');
+//     outInput.innerHTML = resultOut;
+// }
+
+// Task 7 Var_2 *************************************
+document.querySelector('.button-7').onclick = function t7() {
+
+    let inputValue = document.querySelector('.input-7').value;
+    console.log(inputValue);
+    console.log(inputValue.length);
+
+    let resultOut = '';
+
+    for (let i = 0; i < inputValue.length; i++) {
+        resultOut = resultOut + inputValue[i] + '_';
+        //i = i + 1;
+
+    }
+    
+    let outInput = document.querySelector('.out-7');
+    outInput.innerHTML = resultOut;
+}
+
+// Task by Yakhno *************************************
+const myTestArray = [1, 2, 3, 4, 5];
+
+for(let i = 0; i < myTestArray.length; i++) {
+    console.log(myTestArray[i]);
+}
+
+// = equal
+
+myTestArray.forEach((element) => {
+    console.log(element);
+});
+
