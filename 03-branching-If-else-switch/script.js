@@ -144,3 +144,24 @@ buttonFive.onclick = () => {
     let comparisonResult = inputValue == 8;
     outFour.innerHTML = comparisonResult;
 };
+
+// Task 10
+// Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - первое.
+
+function t10(x, y) {
+    if (x > y) {
+        return x;
+    }  else if (y > x) {
+        return y;
+    } else if (x == y) {
+        return x;
+    }
+}
+
+// function t10(x, y) {
+//     return Math.max(x, y);
+// }
+
+document.querySelector('.b-10').onclick = function () {
+    document.querySelector('.out-10').textContent = t10(13, 13);
+}
