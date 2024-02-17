@@ -172,3 +172,16 @@ document.querySelector('.b-7').onclick = function () {
     document.querySelector('.out-7').style.background = t7();
     
 }
+
+
+// Task 4
+// Напишите функцию t4 которая принимает ваш год рождения и вычисляет (возвращает) ваш возраст. 
+
+function t4(birth) {
+    let presentYear = new Date().getFullYear(); // $$$$$$$$$$$$$$
+    return presentYear - birth;  
+}
+
+document.querySelector('.b-4').onclick = function () {
+    document.querySelector('.out-4').textContent = t4(1987);
+}

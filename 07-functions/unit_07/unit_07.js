@@ -49,14 +49,14 @@ document.querySelector('.b-3-2').onclick = function () {
 // Task 4
 // Напишите функцию t4 которая принимает ваш год рождения и вычисляет (возвращает) ваш возраст. 
 
-function t4(present, birth) {
-    return present - birth;
+function t4(birth) {
+    let presentYear = new Date().getFullYear(); // $$$$$$$$$$$$$$
+    return presentYear - birth;  
 }
 
 document.querySelector('.b-4').onclick = function () {
-    document.querySelector('.out-4').textContent = t4(2024, 1987);
+    document.querySelector('.out-4').textContent = t4(1987);
 }
-
 
 // Task 5
 // Напишите функцию t5, которая принимает ваше имя в качестве параметра и возвращает (return) число символов в нем, где name - принятое в качестве параметра имя. Длину (число символов) можно посчитать используя свойство .length.
