@@ -1,0 +1,64 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+.text-center {
+  text-align: center;
+}
+.one {
+  background-color: antiquewhite;
+}
+.two {
+  background-color: orange;
+}
+.three {
+  border: 2px solid red;
+}
+
+.base {
+  background-color: aqua;
+  padding: 20px;
+}
+
+.middle {
+  background-color: brown;
+  padding: 10px;
+}
+
+.appand {
+  background-color: blue;
+  padding: 10px;
+}
+
+.prepand {
+  background-color: blueviolet;
+  padding: 10px;
+}
+
+.before,
+.after {
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+.replace-with {
+  background-color: blueviolet;
+  color: white;
+  padding: 10px;
+}
+
+div {
+  margin-bottom: 10px;
+}
