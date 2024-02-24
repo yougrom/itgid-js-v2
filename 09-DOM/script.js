@@ -40,28 +40,37 @@ console.log(document.querySelectorAll('link')[1].getAttribute('href'));
 one.setAttribute('data-num', 6);
 
 // Задача как посчитать стоимость бензина На сохранение Состояние элемента
+// let gas = document.querySelectorAll('.gas');
+// for(let i = 0; i < gas.length; i++) {
+//     gas[i].onclick = function() {
+//         let gallons = document.querySelector('.gallons').value;
+//         let ammount = this.getAttribute('data'); // this - Эта кнопка по которой нажали
+//         console.log(gallons * ammount);
+//     }
+// }
+
 let gas = document.querySelectorAll('.gas');
-for(let i = 0; i < gas.length; i++) {
+for (let i = 0; i < gas.length; i++) {
     gas[i].onclick = function() {
         let gallons = document.querySelector('.gallons').value;
-        let ammount = this.getAttribute('data'); // this - Эта кнопка по которой нажали
+        let ammount = this.getAttribute('data');
         console.log(gallons * ammount);
     }
 }
 
 // Даем объекты в HTML
-let a = document.createElement('div');
-a.innerHTML = 'Hello';
-a.classList.add('one');
+let a = document.createElement('div');// Создаем элемент div
+a.innerHTML = 'Hello'; // Добавляем текст внутрь div
+a.classList.add('one'); // Добавляем класс элементов div
 console.log(a);
-a.onclick = function() {
+a.onclick = function() { 
     alert('hello');
 }
-// Выводим элемент на страницу
-document.querySelector('.test').appendChild(a);
+document.querySelector('.test').appendChild(a); // Выводим элемент на страницу
 
 
 // Append, prepend, before, after, replaceWith, remove - JavaScript
+
 const base = document.querySelector('.base');
 // append
 let div = document.createElement('div'); // Создаем div
@@ -71,7 +80,7 @@ base.append(div); // append() Вставляется в указанный эл�
 
 // prepend
 let div1 = document.createElement('div'); // Создаем div
-div1.textContent = 'preppand'; // Добавляем в DIV текст
+div1.textContent = 'preppand'; // Добавляе    b5м в DIV текст
 div1.classList.add('prepand'); // Добавляем класс
 base.prepend(div1); // prepend() Вставляется в начало указанного элемента
 
@@ -103,7 +112,14 @@ function f4() {
     out.classList.toggle('bg-orange');
 }
 
-document.querySelector('.b-4').onclick = f4;
+// В JavaScript, когда мы используем classList.add() для добавления класса к элементу, 
+// мы обычно передаем имя класса в виде строки без префикса точки (.). 
+// Точка используется в CSS и при выборе элементов (например, с помощью querySelectorAll), 
+// но не при программном добавлении классов.
+
+
+
+//document.querySelector('.b-4').onclick = f4;
 
 //  Task 5
 // По нажатию .b-5 запускайте функцию f5, которая проверяет наличие класса .bg-orange у блока .out-4 (да, именно у out-4 ). Результат - true или false, выводите в .out-5.
@@ -118,7 +134,7 @@ function f5() {
     }
 }
 
-document.querySelector('.b-5').onclick = f5;
+//document.querySelector('.b-5').onclick = f5;
 
 // Метод classList.contains('bg-orange')возвращает значение true, если класс присутствует, а false если нет. 
 // Метод contains()интерфейса DOMTokenList возвращает логическое значение — true если базовый список содержит данный токен, в противном случае false.
