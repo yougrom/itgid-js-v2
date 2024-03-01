@@ -157,6 +157,8 @@ document.querySelector('.b-8').onclick = f8;
 let ar9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
+    let out = ar9[ar9.length - 1];
+    document.querySelector('.out-9').innerHTML = out;
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -170,6 +172,8 @@ document.querySelector('.b-9').onclick = f9;
 let ar10 = [100, 200, 300, 400, 700, 121];
 
 function f10() {
+    out = ar10[0] + ar10[ar10.length - 1];
+    document.querySelector('.out-10').innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -183,24 +187,39 @@ document.querySelector('.b-10').onclick = f10;
 // Вывод в out-11
 
 let ar11 = [2, 3, 4, 5, 6, 7];
-
+let c = ar11[2];
+ar11[2] = ar11[4];
+ar11[4] = c;
 function f11() {
-
+    let out = '';
+    for (let i = 0; i < ar11.length; i++) {
+        out += ar11[i] + ' ';
+    }
+    document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = f11;
 
 
 // Task 12
-// Напишите функцию f12, которая меняет местами нулевой и последний элемент массива ar12 и выводит его в out-12. Разделитель - пробел. Последний элемент вычислять через длину массива.
+// Напишите функцию f12, которая меняет местами нулевой и последний элемент массива ar12 и выводит его в out-12. 
+// Разделитель - пробел. Последний элемент вычислять через длину массива.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-12
 // Вывод в out-12
 
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 
-function f12() {
+let change = ar12[0];
+ar12[0] = ar12[ar12.length - 1];
+ar12[ar12.length - 1] = change;
 
+function f12() {
+    let out = '';
+    for(let i = 0; i < ar12.length; i++) {
+        out += ar12[i] + ' ';
+    }
+    document.querySelector('.out-12').innerHTML = out;
 }
 
 document.querySelector('.b-12').onclick = f12;
