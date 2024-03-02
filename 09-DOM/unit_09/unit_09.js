@@ -222,26 +222,39 @@ document.querySelector('.b-17').onclick = f17;
 
 function f18() {
     let element = document.querySelector('.p-18');
-    element.getAttribute('data-b');
-    document.querySelector('.out-18').appendChild(element);
+    let dataBValue = element.getAttribute('data-b');
+    document.querySelector('.out-18').textContent = dataBValue;
 }
 
 document.querySelector('.b-18').onclick = f18;
 
 //  Task 19
-// Кнопкa .b-19, которая запускает функцию f19. Функция с помощью getAttribute получает data-b атрибут с параграфов p-19 и выводит в .out-19 через пробел. Обратите внимание, что элементов .p-19 больше одного.
+// Кнопкa .b-19, которая запускает функцию f19. 
+// Функция с помощью getAttribute получает data-b атрибут с параграфов p-19 и выводит в .out-19 через пробел. 
+// Обратите внимание, что элементов .p-19 больше одного.
 
 function f19() {
+    let elements = document.querySelectorAll('.p-19');
 
-}
+    let out = '';
+    for (let i = 0; i < elements.length; i++) {
+        let dataBValue = elements[i].getAttribute('data-b');
+        out += dataBValue + ' ';
+    }
+
+    document.querySelector('.out-19').innerHTML = out;
+ }
 
 document.querySelector('.b-19').onclick = f19;
 
 //  Task 20
-// Кнопкa .b-20, которая запускает функцию f20. Функция с помощью setAttribute присваивает атрибут title="go" в div.out-20. Обращаю ваше внимание - увидеть атрибут можно только в с помощью инструментов веб разработчика.
+// Кнопкa .b-20, которая запускает функцию f20. 
+// Функция с помощью setAttribute присваивает атрибут title="go" в div.out-20. 
+// Обращаю ваше внимание - увидеть атрибут можно только в с помощью инструментов веб разработчика.
 
 function f20() {
-
+    let out = document.querySelector('.out-20');
+    out.setAttribute('title', "go");
 }
 
 document.querySelector('.b-20').onclick = f20;

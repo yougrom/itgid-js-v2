@@ -236,7 +236,11 @@ document.querySelector('.b-12').onclick = f12;
 let ar13 = ['test', 'west', 'list', 'class', 'best'];
 
 function f13() {
-
+    let out = '';
+    for (let i = 0; i < ar13.length; i++) {
+        out += `${i} ${ar13[i]} `;
+    }
+    document.querySelector('.out-13').innerHTML = out.trim();
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -251,7 +255,11 @@ document.querySelector('.b-13').onclick = f13;
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
-
+    let out = '';
+    for (let i = ar14.length - 1; i >= 0; i--) {
+        out += ar14[i] + ' ';
+    }
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -265,6 +273,13 @@ document.querySelector('.b-14').onclick = f14;
 let ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
+    let out = '';
+    for (let i = 0; i < ar15.length; i++) {
+        if (ar15[i] > 0) {
+            out += ar15[i] + ' ';
+        }
+    }
+    document.querySelector('.out-15').innerHTML = out;
 
 }
 
