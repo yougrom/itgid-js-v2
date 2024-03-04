@@ -60,3 +60,124 @@ for (let i = 0; i < b.length; i++) {
 }
 console.log('sum: '  + sum);
 
+
+
+
+// Practice 
+
+const arr = [ 
+1, 2, 3
+]; // arr[0] - 1
+
+const arr2 = [
+  [
+    1, 2, 3
+  ],
+  [
+    12, 15, 23
+  ],
+  [
+    4, 5, 6
+  ], // arr2
+];
+
+// for
+const numbers = [10, 20, 30, 40];
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i] * 2);
+}
+
+// forEach()
+const num2 = [2, 4, 6, 8];
+num2.forEach((item) => console.log(item * 2));
+
+// map()
+const num3 = [3, 6, 9, 12];
+let q = num3.map((item) => item * 2);
+console.log(q);
+
+// Medium
+// const fruits = ['apple', 'banana'];
+// const addedFruits = fruits.push('cherry'); // Add 'cherry' to the end
+// const removedFruit = fruits.pop(); // Remove and return 'cherry'
+// console.log(fruits);
+// console.log(addedFruits);
+// console.log(removedFruit);
+
+// MDN
+const animals = ['pigs', 'goats', 'sheep'];
+
+animals.push('cows');
+
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push('chickens');
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens"]
+
+animals.push('aligator');
+console.log(animals);
+
+animals.push(25);
+console.log(animals);
+
+animals.pop();
+console.log(animals);
+
+animals.unshift('Macbook');
+console.log(animals);
+
+// concat()
+let fruits = ['apple', 'banana'];
+let vegetables = ['carrot', 'spinach'];
+let combined = fruits.concat(vegetables); // Merge arrays
+console.log(fruits);
+console.log(vegetables);
+console.log(combined);
+
+// slice() - 2 параметра с какого по какой
+let fruitsNew = ['apple', 'banana', 'cherry', 'date', 'carrot', 'spinach'];
+let slicedFruits = fruitsNew.slice(2, 5); // Extract 'banana' and 'cherry'
+console.log(fruitsNew);
+console.log(slicedFruits);
+
+// splice() ???
+let fruitsSplice = ['apple', 'banana', 'cherry', 'date', 'carrot', 'spinach', 'cherry'];
+let spliceNew = fruitsSplice.splice(1, 3, 'grape'); // Replace 'banana' with 'grape'
+console.log(fruitsSplice);
+console.log(spliceNew);
+
+// filter()
+let numbersFilter = [1, 2, 3, 4, 5];
+let evenNumbers = numbersFilter.filter(function (num) {
+ return num > 3; // Select even numbers
+});
+console.log(numbersFilter);
+console.log(evenNumbers);
+
+// every() and some()
+let numbersEvery = [2, 5, 4, 12, 3];
+// let allEven = numbersEvery.every(function (num) {
+//  return num >= 2; // Если одно неверное все выражение неверно
+// });
+let hasEven = numbersEvery.some(function (num) {
+ return num === 8; // Если хотя бы одно верно
+});
+console.log(numbersEvery);
+// console.log(allEven);
+console.log(hasEven);
+
+// find() and findIndex()
+let fruitsFind = ['apple', 'banana', 'cherry'];
+// let foundFruit = fruitsFind.find(function (fruit) {
+//  return fruit === 'orange'; // Find 'banana'
+// });
+// console.log(fruitsFind);
+// console.log(foundFruit);
+
+let foundIndex = fruitsFind.findIndex(function (fruit) {
+ return fruit === 'cherry'; // Find the index of 'banana'
+});
+console.log(fruitsFind);
+console.log(foundIndex);
