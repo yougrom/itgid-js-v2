@@ -222,6 +222,7 @@ function f12() {
     document.querySelector('.out-12').innerHTML = out;
 }
 
+
 document.querySelector('.b-12').onclick = f12;
 
 // Task 13
