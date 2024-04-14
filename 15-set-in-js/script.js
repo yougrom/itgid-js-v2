@@ -1,4 +1,4 @@
-// Set - Это новый объекты которые могут содержать только уникальное значение
+// // Set - Это новый объекты которые могут содержать только уникальное значение
 
 const a = new Set([1, 2, 3, 'Hello']);
 a.add(4);
@@ -29,3 +29,22 @@ console.log(b.size);
 let setToArr = Array.from(b);
 console.log(setToArr);
 console.log(setToArr[3]);
+
+
+// Task
+const myArry = [true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true];
+
+const countSheeps = (sheep) => {
+  const filterResult = sheep.filter(element => element === true);
+  return filterResult.length;
+}
+
+console.log(countSheeps(myArry));
+
+
+
