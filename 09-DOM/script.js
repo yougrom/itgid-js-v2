@@ -10,20 +10,20 @@ one.style.paddingBottom = '50px'; // если название стиля в CSS
 // classList— это доступ к списку классов элемента
 one.classList.add('two', 'three'); // конструкция с помощью которой можно добавлять любые CSS классы
 
-/** Хотя classListсамо свойство доступно только для чтения, 
- * его можно изменить DOMTokenListс помощью методов add(), remove(), replace()и toggle().
+/** Хотя classList само свойство доступно только для чтения,
+ * его можно изменить DOMTokenListс помощью методов add(), remove(), replace() и toggle().
  */
 // one.classList.remove('three'); // С помощью свойства remove мы удаляем класс из DOM дерева
 
 // Toggle ============
 const toggle = document.querySelector('.toggle');
 
-toggle.onclick = function() {
-    this.classList.toggle('three'); // this — это элемент на котором происходит события, Получаем доступ к кнопке через this
-}
+toggle.onclick = function () {
+  this.classList.toggle('three'); // this — это элемент на котором происходит события, Получаем доступ к кнопке через this
+};
 
 // Атрибуты элементов
-// data атрибуты позволяют хранить дополнительную информацию в HTML элементах. 
+// data атрибуты позволяют хранить дополнительную информацию в HTML элементах.
 // Они всегда начинаются с data- и могут содержать любые данные.
 // Есть две возможности Создавать атрибуты И читать атрибуты.
 
@@ -49,26 +49,27 @@ one.setAttribute('data-num', 6);
 //     }
 // }
 
+// this - Это ссылка на контекст.
 let gas = document.querySelectorAll('.gas');
 for (let i = 0; i < gas.length; i++) {
-    gas[i].onclick = function() {
-        let gallons = document.querySelector('.gallons').value;
-        let ammount = this.getAttribute('data');
-        console.log(gallons * ammount);
-    }
+  gas[i].onclick = function () {
+    let gallons = document.querySelector('.gallons').value;
+    let ammount = this.getAttribute('data');
+    console.log(gallons * ammount);
+  };
 }
 
 // Даем объекты в HTML
-let a = document.createElement('div');// Создаем элемент div
+let a = document.createElement('div'); // Создаем элемент div
 a.innerHTML = 'Hello'; // Добавляем текст внутрь div
 a.classList.add('one'); // Добавляем класс элементов div
 console.log(a);
-a.onclick = function() { 
-    alert('hello');
-}
+a.onclick = function () {
+  alert('hello');
+};
 document.querySelector('.test').appendChild(a); // Выводим элемент на страницу
 
-
+//***************************************************************** */
 // Append, prepend, before, after, replaceWith, remove - JavaScript
 
 const base = document.querySelector('.base');
@@ -104,39 +105,36 @@ base.replaceWith(div4); // replaceWith() Заменяет основной эл�
 
 div4.remove(); // Удаляет элемент
 
-
 //  Task 4
 // По нажатию кнопки .b-4 запускайте функцию f4, которая делает toggle класса .bg-orange для блока out-4.
 function f4() {
-    let out = document.querySelector('.out-4');
-    out.classList.toggle('bg-orange');
+  let out = document.querySelector('.out-4');
+  out.classList.toggle('bg-orange');
 }
 
-// В JavaScript, когда мы используем classList.add() для добавления класса к элементу, 
-// мы обычно передаем имя класса в виде строки без префикса точки (.). 
-// Точка используется в CSS и при выборе элементов (например, с помощью querySelectorAll), 
+// В JavaScript, когда мы используем classList.add() для добавления класса к элементу,
+// мы обычно передаем имя класса в виде строки без префикса точки (.).
+// Точка используется в CSS и при выборе элементов (например, с помощью querySelectorAll),
 // но не при программном добавлении классов.
-
-
 
 //document.querySelector('.b-4').onclick = f4;
 
 //  Task 5
 // По нажатию .b-5 запускайте функцию f5, которая проверяет наличие класса .bg-orange у блока .out-4 (да, именно у out-4 ). Результат - true или false, выводите в .out-5.
 function f5() {
-    let out5 = document.querySelector('.out-5')
-    let out4 = document.querySelector('.out-4');
-    let bgOrange = out4.classList.contains('bg-orange'); // Метод classList.contains следует вызывать для элемента, который нужно проверить. 
-    if (bgOrange) {
-        out5.innerHTML = true;
-    } else {
-        out5.innerHTML = false;
-    }
+  let out5 = document.querySelector('.out-5');
+  let out4 = document.querySelector('.out-4');
+  let bgOrange = out4.classList.contains('bg-orange'); // Метод classList.contains следует вызывать для элемента, который нужно проверить.
+  if (bgOrange) {
+    out5.innerHTML = true;
+  } else {
+    out5.innerHTML = false;
+  }
 }
 
 //document.querySelector('.b-5').onclick = f5;
 
-// Метод classList.contains('bg-orange')возвращает значение true, если класс присутствует, а false если нет. 
+// Метод classList.contains('bg-orange')возвращает значение true, если класс присутствует, а false если нет.
 // Метод contains()интерфейса DOMTokenList возвращает логическое значение — true если базовый список содержит данный токен, в противном случае false.
 
 /**Определение функции ( function f5() {...}) :

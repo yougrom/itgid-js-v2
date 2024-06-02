@@ -4,32 +4,30 @@
 let ar1 = ['Hello', 37, true];
 
 function f1() {
-    let out = document.querySelector('.out-1');
+  let out = document.querySelector('.out-1');
 
-        out.innerHTML = ar1; // да так можно выводить!!!!
+  out.innerHTML = ar1; // да так можно выводить!!!!
 }
 
 document.querySelector('.b-1').onclick = f1;
 
-
 // Task 2
 //Создайте массив ar2 содержащий строки, числа, булевы значения. Выведите его в div.out-2. Используйте шаблон вывода из кода в JS. Вывод - по нажатию кнопки b-2
 
-    // let out = '';
-    // for (let i = 0; i < ar2.length; i++) {
-    //     out +=ar2[i]+' ';
-    // }
-    // document.querySelector('.out-2').innerHTML = out;
-
+// let out = '';
+// for (let i = 0; i < ar2.length; i++) {
+//     out +=ar2[i]+' ';
+// }
+// document.querySelector('.out-2').innerHTML = out;
 
 let ar2 = ['Hello', 37, true, 24, false];
 
 function f2() {
-    let out = '';
-    for (let i = 0; i < ar2.length; i++) {
-        out += ar2[i] + ' ';
-    }
-    document.querySelector('.out-2').innerHTML = out;
+  let out = '';
+  for (let i = 0; i < ar2.length; i++) {
+    out += ar2[i] + ' ';
+  }
+  document.querySelector('.out-2').innerHTML = out;
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -40,10 +38,10 @@ document.querySelector('.b-2').onclick = f2;
 // Вывод в out-3
 // Тест допустим массив [1,2,3] вывод - 3
 
-let ar3 = [2,3,4,5,6,7,8,9,10];
+let ar3 = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 function f3() {
-    out = ar3.length;
-    document.querySelector('.out-3').innerHTML = out;
+  out = ar3.length;
+  document.querySelector('.out-3').innerHTML = out;
 }
 
 document.querySelector('.b-3').onclick = f3;
@@ -55,11 +53,11 @@ document.querySelector('.b-3').onclick = f3;
 // Вывод в out-4
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 1 4 9
 
-let ar4 = [1,2,3,4,5,6,7,8,9,10];
+let ar4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function f4() {
-    let out = ar4[0] + ' ' + ar4[3] + ' ' + ar4[8];
-    document.querySelector('.out-4').innerHTML = out;
+  let out = ar4[0] + ' ' + ar4[3] + ' ' + ar4[8];
+  document.querySelector('.out-4').innerHTML = out;
 }
 document.querySelector('.b-4').onclick = f4;
 
@@ -70,17 +68,17 @@ document.querySelector('.b-4').onclick = f4;
 // Вывод в out-5
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 8
 
-let ar5 =[1,2,3,4,5,6,7,8,9,10];
+let ar5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function f5() {
-    let out = ar5[0] + ar5[2] + ar5[3];
-    document.querySelector('.out-5').innerHTML = out;
+  let out = ar5[0] + ar5[2] + ar5[3];
+  document.querySelector('.out-5').innerHTML = out;
 }
 
 document.querySelector('.b-5').onclick = f5;
 
 // Task 6
-// Создайте массив ar6, который содержит ваше имя, знак зодиака, день рождения и месяц рождения. Выведите массив на страницу в div-6. 
+// Создайте массив ar6, который содержит ваше имя, знак зодиака, день рождения и месяц рождения. Выведите массив на страницу в div-6.
 // Разделитель - пробел.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-6
@@ -89,18 +87,18 @@ document.querySelector('.b-5').onclick = f5;
 let ar6 = ['Yuriy', 'Aries', 11, 4];
 
 function f6() {
-    let out = '';
-    for (let i = 0; i < ar6.length; i++) {
-        out += ar6[i] + ' ';
-    }
-    document.querySelector('.out-6').innerHTML = out;
+  let out = '';
+  for (let i = 0; i < ar6.length; i++) {
+    out += ar6[i] + ' ';
+  }
+  document.querySelector('.out-6').innerHTML = out;
 }
 
 document.querySelector('.b-6').onclick = f6;
 
 // Task 7
-// Добавьте в массив ar7  значения 'vietnam' с индексом 7 , 'turkey' с индексом 6, 'italy' с индексом 5. Добавление элементов сделайте в f7. 
-// Выведите массив на страницу в .out-7. Разделитель - пробел. Обращаю ваше внимание! 
+// Добавьте в массив ar7  значения 'vietnam' с индексом 7 , 'turkey' с индексом 6, 'italy' с индексом 5. Добавление элементов сделайте в f7.
+// Выведите массив на страницу в .out-7. Разделитель - пробел. Обращаю ваше внимание!
 // Это программирование. Поэтому - никаких больших букв и тому подобного!!!!
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-7
@@ -109,20 +107,20 @@ document.querySelector('.b-6').onclick = f6;
 let ar7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
-    ar7[5] = 'italy';
-    ar7[6] = 'turkey';
-    ar7[7] = 'vietnam';
-    let out = '';
-    for (let i = 0; i < ar7.length; i++) {
-        out += ar7[i] + ' ';
-    }
-    document.querySelector('.out-7').innerHTML = out;
+  ar7[5] = 'italy';
+  ar7[6] = 'turkey';
+  ar7[7] = 'vietnam';
+  let out = '';
+  for (let i = 0; i < ar7.length; i++) {
+    out += ar7[i] + ' ';
+  }
+  document.querySelector('.out-7').innerHTML = out;
 }
 
 document.querySelector('.b-7').onclick = f7;
 
 // Task 8
-// Добавьте в массив ar8 третий (индекс 3) элемент равный 3.14, 4 (индекс 4) элемент равный 17, 6 элемент (индекс 6) равный 5. 
+// Добавьте в массив ar8 третий (индекс 3) элемент равный 3.14, 4 (индекс 4) элемент равный 17, 6 элемент (индекс 6) равный 5.
 // Выведите массив в .out-8. Разделитель - дефис. В .out-8-1 выведите длину массива ar8.
 
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
@@ -132,18 +130,18 @@ document.querySelector('.b-7').onclick = f7;
 let ar8 = [];
 
 function f8() {
-    ar8[3] = 3.14;
-    ar8[4] = 17;
-    ar8[6] = 5;
-    let out = '';
-    let out2 = '';
-    for (let i = 0; i < ar8.length; i++) {
-        if (ar8[i] !== undefined) {
-            out += ar8[i] + '-';
-        }
+  ar8[3] = 3.14;
+  ar8[4] = 17;
+  ar8[6] = 5;
+  let out = '';
+  let out2 = '';
+  for (let i = 0; i < ar8.length; i++) {
+    if (ar8[i] !== undefined) {
+      out += ar8[i] + '-';
     }
-    document.querySelector('.out-8').innerHTML = out;
-    document.querySelector('.out-8-1').innerHTML = ar8.length;
+  }
+  document.querySelector('.out-8').innerHTML = out;
+  document.querySelector('.out-8-1').innerHTML = ar8.length;
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -157,8 +155,8 @@ document.querySelector('.b-8').onclick = f8;
 let ar9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
-    let out = ar9[ar9.length - 1];
-    document.querySelector('.out-9').innerHTML = out;
+  let out = ar9[ar9.length - 1];
+  document.querySelector('.out-9').innerHTML = out;
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -172,12 +170,11 @@ document.querySelector('.b-9').onclick = f9;
 let ar10 = [100, 200, 300, 400, 700, 121];
 
 function f10() {
-    out = ar10[0] + ar10[ar10.length - 1];
-    document.querySelector('.out-10').innerHTML = out;
+  out = ar10[0] + ar10[ar10.length - 1];
+  document.querySelector('.out-10').innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = f10;
-
 
 // Task 11
 // Напишите функцию, которая меняет местами второй (индекс 2) и четвертый (индекс 4) элемент массива ar11 и выводит его в out-11. Разделитель - пробел.
@@ -187,22 +184,22 @@ document.querySelector('.b-10').onclick = f10;
 // Вывод в out-11
 
 let ar11 = [2, 3, 4, 5, 6, 7];
-let c = ar11[2];
-ar11[2] = ar11[4];
-ar11[4] = c;
+
 function f11() {
-    let out = '';
-    for (let i = 0; i < ar11.length; i++) {
-        out += ar11[i] + ' ';
-    }
-    document.querySelector('.out-11').innerHTML = out;
+  let temp = ar11[2];
+  ar11[2] = ar11[4];
+  ar11[4] = temp;
+
+  let out = '';
+  for (let i = 0; i < ar11.length; i++) {
+    out += ar11[i] + ' ';
+  }
+
+  document.querySelector('.out-11').innerHTML = out;
 }
 
-document.querySelector('.b-11').onclick = f11;
-
-
 // Task 12
-// Напишите функцию f12, которая меняет местами нулевой и последний элемент массива ar12 и выводит его в out-12. 
+// Напишите функцию f12, которая меняет местами нулевой и последний элемент массива ar12 и выводит его в out-12.
 // Разделитель - пробел. Последний элемент вычислять через длину массива.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-12
@@ -210,18 +207,17 @@ document.querySelector('.b-11').onclick = f11;
 
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 
-let change = ar12[0];
-ar12[0] = ar12[ar12.length - 1];
-ar12[ar12.length - 1] = change;
-
 function f12() {
-    let out = '';
-    for(let i = 0; i < ar12.length; i++) {
-        out += ar12[i] + ' ';
-    }
-    document.querySelector('.out-12').innerHTML = out;
-}
+  let temp = ar12[0];
+  ar12[0] = ar12[ar12.length - 1];
+  ar12[ar12.length - 1] = temp;
 
+  let out = '';
+  for (let i = 0; i < ar12.length; i++) {
+    out += ar12[i] + ' ';
+  }
+  document.querySelector('.out-12').textContent = out;
+}
 
 document.querySelector('.b-12').onclick = f12;
 
@@ -233,19 +229,17 @@ document.querySelector('.b-12').onclick = f12;
 // Тест допустим массив [1,2,3] вывод:
 //  0 1 1 2 2 3
 
-
 let ar13 = ['test', 'west', 'list', 'class', 'best'];
 
 function f13() {
-    let out = '';
-    for (let i = 0; i < ar13.length; i++) {
-        out += `${i} ${ar13[i]} `;
-    }
-    document.querySelector('.out-13').innerHTML = out.trim();
+  let out = '';
+  for (let i = 0; i < ar13.length; i++) {
+    out += `${i} ${ar13[i]} `;
+  }
+  document.querySelector('.out-13').innerHTML = out.trim();
 }
 
 document.querySelector('.b-13').onclick = f13;
-
 
 // Task 14
 // Используя цикл выведите на страницу массив ar14 в обратном порядке. Разделитель - пробел.
@@ -256,11 +250,11 @@ document.querySelector('.b-13').onclick = f13;
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
-    let out = '';
-    for (let i = ar14.length - 1; i >= 0; i--) {
-        out += ar14[i] + ' ';
-    }
-    document.querySelector('.out-14').innerHTML = out;
+  let out = '';
+  for (let i = ar14.length - 1; i >= 0; i--) {
+    out += ar14[i] + ' ';
+  }
+  document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -274,22 +268,21 @@ document.querySelector('.b-14').onclick = f14;
 let ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
-    let out = '';
-    for (let i = 0; i < ar15.length; i++) {
-        if (ar15[i] > 0) {
-            out += ar15[i] + ' ';
-        }
+  let out = '';
+  for (let i = 0; i < ar15.length; i++) {
+    if (ar15[i] > 0) {
+      out += ar15[i] + ' ';
     }
-    document.querySelector('.out-15').innerHTML = out;
-
+  }
+  document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
 
 // Task 16
-// Выполните перебор массива ar16. Четные элементы добавьте в массив ar16_even, нечетные в ar16_odd. 
-// Добавление в массив - по индексу, а не +=!!!!!. 
-// Протестируйте задачу на повторный запуск! 
+// Выполните перебор массива ar16. Четные элементы добавьте в массив ar16_even, нечетные в ar16_odd.
+// Добавление в массив - по индексу, а не +=!!!!!.
+// Протестируйте задачу на повторный запуск!
 // Выведите ar16_odd в div.out-16-odd, а ar16_even в div.out-16-even. Разделитель - пробел.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-16
@@ -300,25 +293,25 @@ let ar16_odd = [];
 let ar16_even = [];
 
 function f16() {
-    // Сбрасываем массивы в начале функции
-    // let ar16_odd = [];
-    // let ar16_even = [];
+  // Сбрасываем массивы в начале функции
+  // let ar16_odd = [];
+  // let ar16_even = [];
 
-    for (let i = 0; i < ar16.length; i++) {
-        if (ar16[i] % 2 === 0) {
-            ar16_even.push(ar16[i]);
-        } else {
-            ar16_odd.push(ar16[i]);;
-        }
+  for (let i = 0; i < ar16.length; i++) {
+    if (ar16[i] % 2 === 0) {
+      ar16_even.push(ar16[i]);
+    } else {
+      ar16_odd.push(ar16[i]);
     }
-    document.querySelector('.out-16-even').innerHTML = ar16_even.join(' ');
-    document.querySelector('.out-16-odd').innerHTML = ar16_odd.join(' ');
+  }
+  document.querySelector('.out-16-even').innerHTML = ar16_even.join(' ');
+  document.querySelector('.out-16-odd').innerHTML = ar16_odd.join(' ');
 }
 
 document.querySelector('.b-16').onclick = f16;
 
 // Task 17
-// Используя цикл выведите в .out-17 количество элементов ar17, значение которых больше 3. 
+// Используя цикл выведите в .out-17 количество элементов ar17, значение которых больше 3.
 // Для расчета используйте цикл и переменную счетчик.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-17
@@ -327,16 +320,15 @@ document.querySelector('.b-16').onclick = f16;
 let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
 
 function f17() {
-    let count = 0;
-    for (let i = 0; i < ar17.length; i++) {
-        if (ar17[i] > 3) {
-            count += 1;
-        }
+  let count = 0;
+  for (let i = 0; i < ar17.length; i++) {
+    if (ar17[i] > 3) {
+      count += 1;
     }
-    document.querySelector('.out-17').innerHTML = count;
+  }
+  document.querySelector('.out-17').innerHTML = count;
 }
 document.querySelector('.b-17').onclick = f17;
-
 
 // Task 18
 // Используя цикл выведите в .out-18 максимальный элемент массива ar18.
@@ -347,17 +339,16 @@ document.querySelector('.b-17').onclick = f17;
 let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
 
 function f18() {
-    let max = ar18[0];
-    for (let i = 0; i < ar18.length; i++) {
-        if (ar18[i] > max) {
-            max = ar18[i];
-        }
+  let max = ar18[0];
+  for (let i = 0; i < ar18.length; i++) {
+    if (ar18[i] > max) {
+      max = ar18[i];
     }
-    document.querySelector('.out-18').innerHTML = max;
+  }
+  document.querySelector('.out-18').innerHTML = max;
 }
 
 document.querySelector('.b-18').onclick = f18;
-
 
 // Task 19
 // Выведите в .out-19 индекс минимального элемента в массиве ar19
@@ -368,13 +359,17 @@ document.querySelector('.b-18').onclick = f18;
 let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
 
 function f19() {
-    let min = ar19[0];
-    for (let i = 0; i < ar19.length; i++) {
-        if (ar19[i] < min) {
-            min = ar19[i];
-        }
+  let minIndex = 0;
+  let min = ar19[0];
+
+  for (let i = 1; i < ar19.length; i++) {
+    if (ar19[i] < min) {
+      min = ar19[i];
+      minIndex = i;
     }
-    document.querySelector('.out-19').innerHTML = min;
+  }
+  document.querySelector('.out-19').textContent = minIndex;
+  console.log(min);
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -388,12 +383,12 @@ document.querySelector('.b-19').onclick = f19;
 let ar20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
-    let sum = 0;
-    for (let i = 0; i < ar20.length; i++)  {
-        sum = sum + ar20[i];
-        console.log(sum);
-    }
-    document.querySelector('.out-20').innerHTML = sum;
+  let sum = 0;
+  for (let i = 0; i < ar20.length; i++) {
+    sum = sum + ar20[i];
+    console.log(sum);
+  }
+  document.querySelector('.out-20').innerHTML = sum;
 }
 
 document.querySelector('.b-20').onclick = f20;
