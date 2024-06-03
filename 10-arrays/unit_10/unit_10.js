@@ -249,12 +249,20 @@ document.querySelector('.b-13').onclick = f13;
 
 let ar14 = [1, 2, 3, 'hello', 66];
 
+// function f14() {
+//   let out = '';
+//   let rev = ar14.reverse();
+//   for (let i = 0; i < rev.length; i++) {
+//     out += rev[i] + ' ';
+//   }
+//   document.querySelector('.out-14').textContent = out;
+// }
 function f14() {
   let out = '';
   for (let i = ar14.length - 1; i >= 0; i--) {
     out += ar14[i] + ' ';
   }
-  document.querySelector('.out-14').innerHTML = out;
+  document.querySelector('.out-14').textContent = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -293,10 +301,6 @@ let ar16_odd = [];
 let ar16_even = [];
 
 function f16() {
-  // Сбрасываем массивы в начале функции
-  // let ar16_odd = [];
-  // let ar16_even = [];
-
   for (let i = 0; i < ar16.length; i++) {
     if (ar16[i] % 2 === 0) {
       ar16_even.push(ar16[i]);
@@ -307,6 +311,18 @@ function f16() {
   document.querySelector('.out-16-even').innerHTML = ar16_even.join(' ');
   document.querySelector('.out-16-odd').innerHTML = ar16_odd.join(' ');
 }
+
+// function f16() {
+//   for (let i = 0; i < ar16.length; i++) {
+//     if (ar16[i] % 2 === 0) {
+//       ar16_even += ar16[i] + ' ';
+//     } else {
+//       ar16_odd += ar16[i] + ' ';
+//     }
+//   }
+//   document.querySelector('.out-16-odd').textContent = ar16_odd;
+//   document.querySelector('.out-16-even').textContent = ar16_even;
+// }
 
 document.querySelector('.b-16').onclick = f16;
 
