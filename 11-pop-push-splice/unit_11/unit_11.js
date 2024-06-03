@@ -1,23 +1,23 @@
 // Task 1
-// Есть массив d1, кнопка b-1, input i-1. Напишите функцию f1, которая при нажатии читает i-1 и добавляем его в конец массива. 
-// После чего выводит массив в .out-1. Поскольку мы будем выводить массив d1 неоднократно, 
+// Есть массив d1, кнопка b-1, input i-1. Напишите функцию f1, которая при нажатии читает i-1 и добавляем его в конец массива.
+// После чего выводит массив в .out-1. Поскольку мы будем выводить массив d1 неоднократно,
 // то давайте вывод массива сделаем отдельной функцией, showArr - она подготовлена. Изучите ее - это хороший способ оптимизировать код.
 
 function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
+  let out = '';
+  for (let i = 0; i < arr.length; i++) {
+    out += arr[i] + ' ';
+  }
+  document.querySelector(domElem).innerHTML = out;
 }
 
 let d1 = [33, 'best', 66, 'best'];
 
 function f1() {
-    let val = document.querySelector('.i-1').value;
-    d1.push(val);
-    
-    showArr('.out-1', d1);
+  let val = document.querySelector('.i-1').value;
+  d1.push(val);
+
+  showArr('.out-1', d1);
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -27,8 +27,8 @@ document.querySelector('.b-1').onclick = f1;
 // функция выполняется при нажатии кнопки b-2
 
 function f2() {
-    d1.pop();
-    showArr('.out-2', d1);
+  d1.pop();
+  showArr('.out-2', d1);
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -38,8 +38,8 @@ document.querySelector('.b-2').onclick = f2;
 // функция выполняется при нажатии кнопки b-3
 
 function f3() {
-    d1.shift();
-    showArr('.out-3', d1);
+  d1.shift();
+  showArr('.out-3', d1);
 }
 
 document.querySelector('.b-3').onclick = f3;
@@ -48,11 +48,10 @@ document.querySelector('.b-3').onclick = f3;
 // Напишите функцию f4, которая применяет метод push к массиву d1, данные для массива берите из i-4, а затем выводит его (showArr) в .out-4
 // функция выполняется при нажатии кнопки b-4
 
-
 function f4() {
-    let inputValue = document.querySelector('.i-4').value;
-    d1.push(inputValue);
-    showArr('.out-4', d1);
+  let inputValue = document.querySelector('.i-4').value;
+  d1.push(inputValue);
+  showArr('.out-4', d1);
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -62,19 +61,19 @@ document.querySelector('.b-4').onclick = f4;
 // функция выполняется при нажатии кнопки b-5
 
 function f5() {
-    let inputValue = document.querySelector('.i-5').value;
-    d1.unshift(inputValue);
-    showArr('.out-5', d1);
+  let inputValue = document.querySelector('.i-5').value;
+  d1.unshift(inputValue);
+  showArr('.out-5', d1);
 }
 
 document.querySelector('.b-5').onclick = f5;
 
 // Task 6
-// Напишите функцию f6, которая эмулирует работу метода push применительно к массиву d6. 
-// Т.е. добавляет значение из i-6 как последний элемент в массив d6. 
-// Эмуляция, значит, что мы получим результат аналогичный методу push без применения его. 
-// Эмуляция заключается в присвоение значения как последнего элемента массива. 
-// Как вычислить индекс последнего элемента используя длину массива - вы знаете из предыдущего урока. 
+// Напишите функцию f6, которая эмулирует работу метода push применительно к массиву d6.
+// Т.е. добавляет значение из i-6 как последний элемент в массив d6.
+// Эмуляция, значит, что мы получим результат аналогичный методу push без применения его.
+// Эмуляция заключается в присвоение значения как последнего элемента массива.
+// Как вычислить индекс последнего элемента используя длину массива - вы знаете из предыдущего урока.
 // Повторный запуск функции должен также приводить к добавлению элемента.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-6
@@ -83,16 +82,16 @@ document.querySelector('.b-5').onclick = f5;
 let d6 = ['test', 5, 12];
 
 function f6() {
-    let inputValue = document.querySelector('.i-6').value;
-    d6[d6.length] = inputValue;
-    showArr('.out-6', d6);
+  let inputValue = document.querySelector('.i-6').value;
+  d6[d6.length] = inputValue;
+  showArr('.out-6', d6);
 }
 
 document.querySelector('.b-6').onclick = f6;
 
 // Task 7
-// Напишите функцию f7, которая эмулирует метод pop, т.е. удаляет последний элемент массива d7. 
-// Эмулировать - получать результат аналогичный pop, но без применения pop. 
+// Напишите функцию f7, которая эмулирует метод pop, т.е. удаляет последний элемент массива d7.
+// Эмулировать - получать результат аналогичный pop, но без применения pop.
 // Функция может быть вызвана много раз, при этом каждый раз должен удаляться последний элемент d7.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-7
@@ -101,16 +100,16 @@ document.querySelector('.b-6').onclick = f6;
 let d7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
-    if (d7.length > 0) {
-        d7.length = d7.length - 1;
-    }
-    showArr('.out-7', d7);
+  if (d7.length > 0) {
+    d7.length = d7.length - 1;
+  }
+  showArr('.out-7', d7);
 }
 
 document.querySelector('.b-7').onclick = f7;
 
 // Task 8
-// Напишите функцию f8, которая эмулирует работу метода unshift - 
+// Напишите функцию f8, которая эмулирует работу метода unshift -
 // добавляем значение из i-8 в начало массива d8.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-8
@@ -119,11 +118,9 @@ document.querySelector('.b-7').onclick = f7;
 let d8 = [2, '4', 12, 67, 'hello'];
 
 function f8() {
-    let val = document.querySelector('.i-8').value; // Когда получаем значение элемента ввода с помощью .value, оно представляет собой строку. 
-
-    d8 = [val, ...d8];
-
-    showArr('.out-8', d8);
+  let val = document.querySelector('.i-8').value;
+  d8 = [val, ...d8];
+  showArr('.out-8', d8);
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -137,8 +134,12 @@ document.querySelector('.b-8').onclick = f8;
 let d9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
+  for (let i = 1; i < d9.length; i++) {
+    d9[i - 1] = d9[i];
+  }
 
-    showArr('.out-9', d9);
+  d9.length = d9.length - 1;
+  showArr('.out-9', d9);
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -152,27 +153,24 @@ document.querySelector('.b-9').onclick = f9;
 let d10 = [3, 14, 15, 92, 6];
 
 function f10() {
-
-    showArr('.out-10', d10);
+  d10.reverse();
+  showArr('.out-10', d10);
 }
 
 document.querySelector('.b-10').onclick = f10;
 
-
 // Task 11
-// Напишите функцию, которая получает число из input i-11, переводит в число, и с помощью метода indexOf проверяет наличие в массиве d11. Функция выводит в out-11 -1 если такого числа нет в массиве, либо его индекс в массиве.
+// Напишите функцию, которая получает число из input i-11, переводит в число, и с помощью метода indexOf проверяет наличие в массиве d11.
+// Функция выводит в out-11 -1 если такого числа нет в массиве, либо его индекс в массиве.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-11
 // Вывод в out-11
 
 let d11 = [2, 3, 4, 5, 6, 7];
 
-function f11() {
-
-}
+function f11() {}
 
 document.querySelector('.b-11').onclick = f11;
-
 
 // Task 12
 // Напишите функцию f12, которая эмулирует работу метода indexOf - ищет введенное число в массиве d12 (перебором). Если числа нет - выводит -1, если есть - его позицию в массиве.
@@ -182,9 +180,7 @@ document.querySelector('.b-11').onclick = f11;
 
 let d12 = [6, 62, 60, 70, 1, 5];
 
-function f12() {
-
-}
+function f12() {}
 
 document.querySelector('.b-12').onclick = f12;
 
@@ -194,16 +190,13 @@ document.querySelector('.b-12').onclick = f12;
 // Вывод - по нажатию кнопки b-13
 // Вывод в out-13
 
-
 let d13 = [6, 0, 22, 1, 4, 76];
 
 function f13() {
-
-    showArr('.out-13', d13);
+  showArr('.out-13', d13);
 }
 
 document.querySelector('.b-13').onclick = f13;
-
 
 // Task 14
 // Напишите функцию, которая получает i-14, переводит в число, а потом заполняет массив d14 так, что количество элементов равно введенному числу, и каждый элемент равен 1. Т.е. пользователь ввел 5, массив будет [1,1,1,1,1]. Выведите массив в out-14.
@@ -214,8 +207,7 @@ document.querySelector('.b-13').onclick = f13;
 let d14 = [];
 
 function f14() {
-
-    showArr('.out-14', d14);
+  showArr('.out-14', d14);
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -229,9 +221,7 @@ document.querySelector('.b-14').onclick = f14;
 let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
-
-
-    showArr('.out-15', d15);
+  showArr('.out-15', d15);
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -247,8 +237,7 @@ let d161 = [5, 6, 7, 8, 9];
 let d162 = [23, 24, 56, 87];
 
 function f16() {
-
-    showArr('.out-16', d16);
+  showArr('.out-16', d16);
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -264,12 +253,10 @@ let d171 = ['a', 'b', 'c', 'd'];
 let d172 = [1, 2, 3, 4, 5];
 
 function f17() {
-
-    showArr('.out-17', d17);
+  showArr('.out-17', d17);
 }
 
 document.querySelector('.b-17').onclick = f17;
-
 
 // Task 18
 // Напишите функцию f18, которая получает значение из i-18 и проверяет есть ли такое значение в массиве d18 c использованием метода include. Результат применения метода - выводится в .out-18.
@@ -279,12 +266,9 @@ document.querySelector('.b-17').onclick = f17;
 
 let d18 = ['b', 'c', '45', 'e', 'z', 'y'];
 
-function f18() {
-
-}
+function f18() {}
 
 document.querySelector('.b-18').onclick = f18;
-
 
 // Task 19
 // Напишите фукнцию f19, которая выводит самую длинную строку maxString из массива d19 в out-19.
@@ -292,12 +276,21 @@ document.querySelector('.b-18').onclick = f18;
 // Вывод - по нажатию кнопки b-19
 // Вывод в out-19
 
-let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged', 'in', 'advance', 'every'];
+let d19 = [
+  'Your',
+  'payment',
+  'method',
+  'will',
+  'automatically',
+  'be',
+  'charged',
+  'in',
+  'advance',
+  'every',
+];
 let maxString = '';
 
-function f19() {
-
-}
+function f19() {}
 
 document.querySelector('.b-19').onclick = f19;
 
@@ -309,8 +302,6 @@ document.querySelector('.b-19').onclick = f19;
 
 let d20 = [4, 5, 6, 7, 8, 9, 10];
 
-function f20() {
-
-}
+function f20() {}
 
 document.querySelector('.b-20').onclick = f20;
