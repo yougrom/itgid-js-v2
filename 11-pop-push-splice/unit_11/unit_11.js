@@ -168,7 +168,12 @@ document.querySelector('.b-10').onclick = f10;
 
 let d11 = [2, 3, 4, 5, 6, 7];
 
-function f11() {}
+function f11() {
+  let out = document.querySelector('.out-11');
+  let val = Number(document.querySelector('.i-11').value);
+  console.log(val);
+  out.innerHTML = d11.indexOf(val);
+}
 
 document.querySelector('.b-11').onclick = f11;
 
@@ -180,7 +185,18 @@ document.querySelector('.b-11').onclick = f11;
 
 let d12 = [6, 62, 60, 70, 1, 5];
 
-function f12() {}
+function f12() {
+  let out = document.querySelector('.out-12');
+  let val = Number(document.querySelector('.i-12').value);
+  for (let i = 0; i < d12.length; i++) {
+    if (d12[i] === val) {
+      out.textContent = i;
+      break;
+    } else {
+      out.textContent = -1;
+    }
+  }
+}
 
 document.querySelector('.b-12').onclick = f12;
 
@@ -193,7 +209,11 @@ document.querySelector('.b-12').onclick = f12;
 let d13 = [6, 0, 22, 1, 4, 76];
 
 function f13() {
-  showArr('.out-13', d13);
+  let reverseArray = [];
+  for (let i = d13.length - 1; i >= 0; i--) {
+    reverseArray.push(d13[i]);
+  }
+  showArr('.out-13', reverseArray);
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -207,6 +227,10 @@ document.querySelector('.b-13').onclick = f13;
 let d14 = [];
 
 function f14() {
+  let val = Number(document.querySelector('.i-14').value);
+  for (let i = 0; i < val; i++) {
+    d14.push(1);
+  }
   showArr('.out-14', d14);
 }
 
@@ -221,9 +245,14 @@ document.querySelector('.b-14').onclick = f14;
 let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
-  showArr('.out-15', d15);
+  let val = Number(document.querySelector('.i-15').value);
+  for (let i = 0; i < d15.length; i++) {
+    if (!d15.includes(val)) {
+      d15.push(val);
+    }
+    showArr('.out-15', d15);
+  }
 }
-
 document.querySelector('.b-15').onclick = f15;
 
 // Task 16
@@ -237,6 +266,7 @@ let d161 = [5, 6, 7, 8, 9];
 let d162 = [23, 24, 56, 87];
 
 function f16() {
+  d16 = d161.concat(d162);
   showArr('.out-16', d16);
 }
 
@@ -253,6 +283,12 @@ let d171 = ['a', 'b', 'c', 'd'];
 let d172 = [1, 2, 3, 4, 5];
 
 function f17() {
+  for (let i = 0; i < d171.length; i++) {
+    d17.push(d171[i]);
+  }
+  for (let i = 0; i < d172.length; i++) {
+    d17.push(d172[i]);
+  }
   showArr('.out-17', d17);
 }
 
