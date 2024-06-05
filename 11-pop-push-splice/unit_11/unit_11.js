@@ -295,14 +295,22 @@ function f17() {
 document.querySelector('.b-17').onclick = f17;
 
 // Task 18
-// Напишите функцию f18, которая получает значение из i-18 и проверяет есть ли такое значение в массиве d18 c использованием метода include. Результат применения метода - выводится в .out-18.
+// Напишите функцию f18, которая получает значение из i-18 и проверяет есть ли такое значение в массиве d18 c использованием метода include.
+// Результат применения метода - выводится в .out-18.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-18
 // Вывод в out-18
 
 let d18 = ['b', 'c', '45', 'e', 'z', 'y'];
 
-function f18() {}
+function f18() {
+  let val = document.querySelector('.i-18').value;
+  let out = '';
+  for (let i = 0; i < d18.length; i++) {
+    out = d18.includes(val);
+  }
+  document.querySelector('.out-18').textContent = out;
+}
 
 document.querySelector('.b-18').onclick = f18;
 
@@ -326,18 +334,29 @@ let d19 = [
 ];
 let maxString = '';
 
-function f19() {}
+function f19() {
+  for (let i = 0; i < d19.length; i++) {
+    if (d19[i].length > maxString.length) {
+      maxString = d19[i];
+    }
+  }
+  document.querySelector('.out-19').textContent = maxString;
+}
 
 document.querySelector('.b-19').onclick = f19;
 
 // Task 20
-// Напишите функцию f20, которая применяет к массиву d20 метод join с параметрами и соединяет элементы массива в одну строку. Результат выводит в .out-20. Укажите мето так d20.join(''). Обратите внимание  - между апострофами нет пробела!!!.
+// Напишите функцию f20, которая применяет к массиву d20 метод join с параметрами и соединяет элементы массива в одну строку. Результат выводит в .out-20.
+// Укажите мето так d20.join(''). Обратите внимание  - между апострофами нет пробела!!!.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-20
 // Вывод в out-20
 
 let d20 = [4, 5, 6, 7, 8, 9, 10];
 
-function f20() {}
+function f20() {
+  let out = d20.join('');
+  out = document.querySelector('.out-20').innerHTML = out;
+}
 
 document.querySelector('.b-20').onclick = f20;
