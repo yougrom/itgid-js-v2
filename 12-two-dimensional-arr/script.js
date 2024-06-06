@@ -54,11 +54,10 @@ let d = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 document.querySelector('.out2').innerHTML = d;
 let k = 0;
 document.querySelector('button').onclick = () => {
-  if (k + 1 < 9) {
+  if (k + 1 <= 9) {
     d[k] = 0;
     d[k + 1] = 1;
     k++;
   }
   document.querySelector('.out2').innerHTML = d;
-
-}
+};
