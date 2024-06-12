@@ -10,7 +10,7 @@ function f1() {
     five: 20,
   };
   document.querySelector('.out-1').innerHTML = a1.two;
-  //return ...
+  return a1.two;
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -51,7 +51,7 @@ function f3() {
   let out = '';
   for (let key in a3) {
     if (a3[key] === 'hi') {
-      out += a3[key] + '_';
+      out += a3[key] + ' ';
     }
   }
   return out;
@@ -78,7 +78,7 @@ let a4 = {
 function f4() {
   let out = '';
   for (let key in a4) {
-    out += key + ' ' + a4[key] + '<br>';
+    out += key + ' ' + a4[key] + ' <br>';
   }
   return out;
 }
@@ -162,7 +162,7 @@ function f8() {
   let key = document.querySelector('.i-8').value;
   let out = 0;
   if (key in a8) {
-    out = 1;
+    out = a8[key];
   }
   document.querySelector('.out-8').innerHTML = out;
 }
@@ -256,8 +256,8 @@ function f12() {
   let val = document.querySelector('.i-12').value;
   if (val in a12) {
     delete a12[val];
-    f5(a12, '.out-12');
   }
+  f5(a12, '.out-12');
 }
 
 document.querySelector('.b-12').onclick = f12;
