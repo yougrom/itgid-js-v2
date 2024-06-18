@@ -45,13 +45,13 @@ console.log(qP); // NodeList(3) [p, p, p]
 // difference between NodeList and HTMLCollection - https://www.geeksforgeeks.org/difference-between-nodelist-and-htmlcollection/
 
 // ********************************************************************************************************
-// for of Example 4 —  — https://www.youtube.com/watch?v=_Jxe-WacgUs
+// for...of Example 4 —  — https://www.youtube.com/watch?v=_Jxe-WacgUs
 const basket = [{ price: 20 }, { price: 30 }, { price: 40 }, { price: 50 }];
 for (let item of basket) {
   console.log(`Price: ${item.price}`);
 }
 
-// for of Example 5
+// for...of Example 5
 const basket1 = [
   { name: 'apple', price: 20 },
   { name: 'orange', price: 30 },
@@ -64,7 +64,7 @@ for (const { name, price } of basket1) {
   console.log(`Price of ${name} is ${price}`);
 }
 
-// for in Example 6 - работает только с объектами (не с массивами)
+// for...in - работает с Ключами объекта (не с массивами)
 const basket2 = {
   laptop: 1500,
   smartphone: 1000,
@@ -75,7 +75,7 @@ for (let key in basket2) {
   console.log(`Price of ${key} is ${price}`);
 }
 
-// for in Example 7 - работает только с объектами (не с массивами)
+// Замена цикла for...in На for...of — Object.keys()
 const electronics = {
   laptop: 1500,
   smartphone: 1000,
@@ -85,6 +85,26 @@ for (let name of Object.keys(electronics)) {
   const price = electronics[name];
   console.log(`Price of ${name} is ${price}`);
 }
+// Object.keys(electronics) возвращает массив ключей (названий свойств) объекта electronics, то есть ['laptop', 'smartphone', 'tablet'].
+// Цикл for...of перебирает каждый ключ (название свойства) из этого массива.
+// Внутри цикла значение price получается из объекта electronics по текущему ключу name.
+// В данном примере мы сначала получаем массив ключей с помощью Object.keys(), а затем, уже внутри цикла, используя каждый ключ, обращаемся к значению.
+// Таким образом, каждый шаг цикла включает два действия: получение ключа и использование этого ключа для доступа к значению.
+
+// Замена цикла for...in На for...of — Object.entries()
+const electronics1 = {
+  laptop: 1500,
+  smartphone: 1000,
+  tablet: 800,
+};
+for (const [name, price] of Object.entries(electronics1)) {
+  console.log(`Price of ${name} is ${price}`);
+}
+// Object.entries(electronics1) возвращает массив пар [ключ, значение] из объекта electronics1, то есть [['laptop', 1500], ['smartphone', 1000], ['tablet', 800]].
+// Цикл for...of перебирает каждую пару [ключ, значение] из этого массива.
+// Внутри цикла происходит деструктуризация каждой пары на переменные name и price.
+// В данном примере мы сразу получаем массив пар ключ-значение с помощью Object.entries(), и каждая итерация цикла предоставляет нам уже готовые для использования ключ и значение.
+// Это делает код более лаконичным и удобным, так как не требуется дополнительное обращение к объекту для получения значений.
 
 // Task
 let arrNew = ['1', '2', '3', '4'];
