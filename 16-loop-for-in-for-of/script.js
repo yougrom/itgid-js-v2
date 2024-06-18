@@ -44,7 +44,8 @@ console.log(qP); // NodeList(3) [p, p, p]
 // HTMLCollection - это результат работы методов getElementsByTagName, getElementsByClassName, getElementsByName
 // difference between NodeList and HTMLCollection - https://www.geeksforgeeks.org/difference-between-nodelist-and-htmlcollection/
 
-// for of Example 4
+// ********************************************************************************************************
+// for of Example 4 —  — https://www.youtube.com/watch?v=_Jxe-WacgUs
 const basket = [{ price: 20 }, { price: 30 }, { price: 40 }, { price: 50 }];
 for (let item of basket) {
   console.log(`Price: ${item.price}`);
@@ -58,6 +59,7 @@ const basket1 = [
   { name: 'kiwi', price: 50 },
 ];
 for (const { name, price } of basket1) {
+  // { name, price } — деструктурирующие оператор
   // деструктуризация объекта - достаем свойства объекта в переменные name и price
   console.log(`Price of ${name} is ${price}`);
 }
@@ -83,3 +85,9 @@ for (let name of Object.keys(electronics)) {
   const price = electronics[name];
   console.log(`Price of ${name} is ${price}`);
 }
+
+// Task
+let arrNew = ['1', '2', '3', '4'];
+let q = arrNew.splice(1, 2, 'Hi', 'hello');
+console.log(q);
+console.log(arrNew);
