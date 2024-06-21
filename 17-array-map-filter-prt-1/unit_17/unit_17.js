@@ -130,8 +130,14 @@ document.querySelector('.b-7').onclick = () => {
 
 let a8 = [3, 14, 15, 92, 7, 32, 59];
 
-function t8() {}
-
+function t8() {
+  const a8_res = a8.map((item, index) => {
+      if (item % 2 === 0) {
+        return index;
+      }
+    }).filter((index) => index !== undefined);
+  return a8_res;
+}
 document.querySelector('.b-8').onclick = () => {
   console.log(t8());
 };
@@ -146,18 +152,31 @@ let a9 = [
   'Far Cry Primal',
 ];
 
-function t9() {}
+function t9() {
+  a9.forEach(function(item, index){
+    console.log(a9[index]);
+     return a9[index] = item.toLowerCase();
+  })
+  return a9;
+}
 
 document.querySelector('.b-9').onclick = () => {
   console.log(t9());
 };
 
 // Task 10 ============================================
-/*  Дан массив a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью forEach, переберите массив a10 и элементы, которые меньше нуля замените на 0.  Возвратите a10. Действия должны запускаться при вызове функции t10.  Для данного примера результат должен выглядеть так: [2, 13, 14, 0, 9, 5, 0, 0, 14]*/
+/*  Дан массив a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью forEach, переберите массив a10 и элементы, которые меньше нуля замените на 0.  Возвратите a10. Действия должны запускаться при вызове функции t10. Для данного примера результат должен выглядеть так: [2, 13, 14, 0, 9, 5, 0, 0, 14]*/
 
 let a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
-function t10() {}
+function t10() {
+  a10.forEach(function (item, index) {
+    if (item < 0) {
+      return a10[index] = 0;
+    }
+  })
+  return a10;
+}
 
 document.querySelector('.b-10').onclick = () => {
   console.log(t10());
@@ -168,7 +187,10 @@ document.querySelector('.b-10').onclick = () => {
 
 let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
-function t11() {}
+function t11() {
+  const a11_res = a11.filter((num, index) => index % 2 === 0);
+  return a11_res;
+}
 
 document.querySelector('.b-11').onclick = () => {
   console.log(t11());
@@ -178,9 +200,11 @@ document.querySelector('.b-11').onclick = () => {
 /*  Данa переменная a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14]. С помощью метода Array.isArray определите является ли переменная a12 массивом. Если да - то функция возврaщает true, если нет false.*/
 
 let a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
-// a12 = 8; // на этой переменной можно проверить работает или нет ваша функция.
+a12 = 8; // на этой переменной можно проверить работает или нет ваша функция.
 
-function t12() {}
+function t12() {
+  return Array.isArray(a12);
+}
 
 document.querySelector('.b-12').onclick = () => {
   console.log(t12());
@@ -192,7 +216,9 @@ document.querySelector('.b-12').onclick = () => {
 let a13 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 let a13_num = 9;
 
-function t13() {}
+function t13() {
+  return a13.includes(a13_num);
+}
 
 document.querySelector('.b-13').onclick = () => {
   console.log(t13());
@@ -202,9 +228,12 @@ document.querySelector('.b-13').onclick = () => {
 /*  Дан массив a14 = ['c', 'C', 'd', 'e', 'E']. С помощью метода includes функция t14 должна определить, есть ли значение из переменной a14_sym в массиве. Если да - то функция возврaщает true, если нет false. Обратите внимание, функция должна искать независимо от регистра. Т.е. если в a14_sym будет строка 'd' то возвратить true, однако и на строку 'D' тоже возвратить true. */
 
 let a14 = ['c', 'C', 'd', 'e', 'E'];
-let a14_sym = 'e';
+let a14_sym = 'd';
 
-function t14() {}
+function t14() {
+
+    return a14.includes(a14_sym);
+}
 
 document.querySelector('.b-14').onclick = () => {
   console.log(t14());
@@ -245,7 +274,10 @@ let a15 = [
   },
 ];
 
-function t15() {}
+function t15() {
+  const a15_res = a15.filter((item) => item.pnum.length === 6 && item.pnum !== '');
+  return a15_res;
+}
 
 document.querySelector('.b-15').onclick = () => {
   console.log(t15());
